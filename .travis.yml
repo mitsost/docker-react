@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t mitsost/docker-react  -f ./client/Dockerfile.dev .
+  - docker build -f Dockerfile.dev .
 
 script:
   - docker run -e CI=true mitsost/docker-react npm run test
